@@ -7,7 +7,100 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About Laravel# Auth App
+
+## Descrição do projeto
+<p align="center">
+  <img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" alt="Laravel" width="260">
+</p>
+
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/PHP-8.1%2B-777BB4?style=flat-square&logo=php" alt="PHP"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Laravel-10.x-E94E3E?style=flat-square&logo=laravel" alt="Laravel"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Database-MySQL%2FMariaDB-4479A1?style=flat-square&logo=mysql" alt="Database"></a>
+  <a href="#"><img src="https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?style=flat-square&logo=tailwindcss" alt="Tailwind CSS"></a>
+</p>
+
+# Auth App
+
+Uma aplicação Laravel para gestão de posts, categorias e usuários com autenticação segura.
+
+---
+
+## ✨ Visão geral
+
+Auth App é um painel de publicação focado em conteúdo, pensado para ensinar e entregar um fluxo completo de CRUD:
+
+- autenticação de usuário (login, cadastro e logout)
+- criação, edição e exclusão de posts
+- upload e exibição de imagens
+- organização de posts por categoria
+- interface moderna com Blade + Tailwind CSS
+- rotas RESTful com controllers Laravel
+
+---
+
+## 🧩 O que tem no projeto
+
+- Painel de posts com lista e cards responsivos
+- Formulário de criação/edição de post com upload de imagem
+- Cadastro e listagem de categorias
+- Relacionamento `Post belongsTo Categoria`
+- Validação de dados no backend
+- Uso de `storage:link` para servir imagens
+- Áreas protegidas por autenticação
+
+---
+
+## 🚀 Requisitos
+
+- PHP 8.1 ou superior
+- Composer
+- MySQL ou MariaDB
+- XAMPP no Windows (opcional)
+- Node.js e npm (para compilar assets)
+- Extensões PHP:
+  - `pdo`
+  - `mbstring`
+  - `openssl`
+  - `tokenizer`
+  - `xml`
+  - `ctype`
+  - `json`
+  - `fileinfo`
+
+---
+
+## ⚙️ Instalação
+
+```bash
+git clone <url-do-repositorio> auth-app
+cd auth-app
+composer install
+copy  .env
+php artisan key:generate
+Auth App é uma aplicação web construída com Laravel para gerenciar posts e categorias com autenticação de usuário. O sistema permite:
+- cadastro e login de usuários
+- criação, edição e exclusão de posts
+- upload de imagem para posts
+- associação de posts com categorias
+- interface simples e responsiva usando componentes Blade
+
+## Requisitos para rodar o projeto
+
+- PHP 8.1 ou superior
+- Composer
+- MySQL ou MariaDB
+- XAMPP (opcional, mas recomendado no Windows)
+- Node.js e npm (se for compilar assets frontend)
+- Extensões PHP: `pdo`, `mbstring`, `openssl`, `tokenizer`, `xml`, `ctype`, `json`, `fileinfo`
+
+## Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio> auth-app
+   cd auth-app
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
