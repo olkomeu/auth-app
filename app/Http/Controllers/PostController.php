@@ -23,30 +23,22 @@ class PostController extends Controller
     }
 
     public function store(Request $request)
-    {
-        // Validar dados
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'text' => 'required|string',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // 2MB
-            'categorias_id' => 'required|exists:categorias,id',
-        ], [
-            'image.image' => 'O arquivo deve ser uma imagem válida.',
-            'image.mimes' => 'A imagem deve ser do tipo: jpeg, png, jpg ou gif.',
-            'image.max' => 'A imagem não pode ser maior que 2MB.',
-        ]);
+{
+    // ... sua lógica de validação e upload da imagem aqui ...
 
-        // Processar upload da imagem
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('posts', 'public');
-            $validated['image'] = $imagePath;
-        }
+    Post::create([
+        'title'         => $request->input('title'),
+        'text'          => $request->input('text'),
+        'categorias_id' => $request->input('categorias_id'),
+        'image'         => $caminhoDaImagem, 
+        
+        // 🚀 ADICIONE ESTAS DUAS LINHAS AQUI:
+        'marca'         => $request->input('marca'),
+        'preco'         => $request->input('preco'),
+    ]);
 
-        // Criar post
-        Post::create($validated);
-
-        return redirect()->route('posts.index')->with('success', 'Post criado com sucesso!');
-    }
+    return redirect()->route('posts.index');
+}
 
     public function edit(Post $post)
     {

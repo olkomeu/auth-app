@@ -6,7 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = ['title', 'text', 'categorias_id'];
+    protected $fillable = [
+    'title', 
+    'text', 
+    'image', 
+    'categorias_id', 
+    'marca',
+    'preco'
+];
 
 
  // Metodo para retornar o caminho completo da imagem
